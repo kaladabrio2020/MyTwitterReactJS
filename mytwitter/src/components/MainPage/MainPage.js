@@ -12,9 +12,15 @@ export default function MainPage(){
                 </div>  
 
                 <div className={Styles.DivUser}>
-                    <input placeholder="E-mail ou Cpf" />   <br></br>
-                    <input placeholder="Senha" />           <br></br>
-                    <button title="Entrar"/>
+
+                    <form className={Styles.FormInput}>
+                        <input type="text" placeholder="E-mail ou Cpf"  />   
+                        <input type="text" placeholder="Senha"          /> 
+                    </form>
+
+                    <div>
+                        <button title="Entrar"/>
+                    </div>
                 </div>      
             
             </div>
