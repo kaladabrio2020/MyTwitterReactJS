@@ -2,6 +2,13 @@
 
 
 # [MyTwitterReactJS](/mytwitter/)
+Na cadeira de Tecnicas de Programação I o trabalho final da cadeira era implementar um pequeno twitter ,no qual esse consistia :
+* Seguir alguem ou deixar de seguir
+* Ver sequidores e sequidos
+* Enviar mensagens
+* Salvar os dados em arquivos persistentes
+>Esse trabalho foi feito em `Java`.
+Agora irei faze-lo em Javascript mas o escopo do desse projeto terá algumas alterações
 
 
 # Tecnologias e ferramentas
