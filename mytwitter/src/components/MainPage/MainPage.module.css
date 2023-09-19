@@ -5,7 +5,7 @@ body{
     font-family: 'Lato', sans-serif;
 }
 .DivMain{
-    margin-top: 240px;
+    margin-top: 270px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -24,20 +24,27 @@ body{
 .DivUser{
     background-color: #ffffff;
     position    : absolute;
-    width : 350px;
+    width : 400px;
     height: 300px;
-    margin-left: 350px;
+    margin-left: 390px;
     display: flex;
     align-items    : center;
-    justify-content: center;
     flex-direction : column;
 
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.487);
 }
 
-.FormInput{
+.DivButtonEntrar{
     margin-top: 10px;
+}
+
+.DivButtonCriarConta{
+
+}
+
+.FormInput{
+    margin-top: 12px;
     display: flex;
     align-items    : center;
     justify-content: center;
@@ -46,23 +53,37 @@ body{
 
 h1{
     color: #ffffff;
-    font-size: 28pt;
+    font-size: 30pt;
 }
 
 p{
-    font-size: 14pt;
+    font-size: 15pt;
 }
 
 input{
-    font-size: 10pt;
+    font-size: 12pt;
     height: 40px;
-    width : 300px;
+    width : 350px;
     margin-top: 10px;
     padding-left: 10px;
     border-width: 1px;
     border-radius: 10px;
     outline: none;
 }
+
 input:focus{
     border: 3px solid red;
+}
+
+.buttonSenha{
+    background-color: #ffffff;
+    border: 0;
+}
+
+.buttonEntrar{
+    background-color: rgb(0, 185, 241);
+    color: aliceblue;
+    font-size: 11pt;
+    height: 25px;
+    border-width: 0;   
 }

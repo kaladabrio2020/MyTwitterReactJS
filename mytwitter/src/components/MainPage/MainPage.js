@@ -19,7 +19,15 @@ export default function MainPage(){
                     </form>
 
                     <div>
-                        <button title="Entrar"/>
+                        <button className={Styles.buttonSenha}>Esqueceu sua senha?</button>
+                    </div>
+                    
+                    <div className={Styles.DivButtonEntrar}>
+                        <button className={Styles.buttonEntrar}>Entrar</button>
+                    </div>
+
+                    <div>
+                        <button>Criar Conta</button>
                     </div>
                 </div>      
             
