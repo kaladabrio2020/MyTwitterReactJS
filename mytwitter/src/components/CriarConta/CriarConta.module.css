@@ -1,5 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body{
+    background-color: #f0f8ff;
     font-family: 'Lato', sans-serif;
+}
+
+
+.DivMain{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.DivFormulario{
+    background-color: #41729F;
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.317);
+  
+}
+
+.FormCadastro{
+    margin-top: 15px;
+}
+
+
+.InputFormulario{
+    font-size: 12pt;
+    height: 40px;
+    width : 410px;
+    margin-top: 10px;
+    padding-left: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.62);
+    border-radius: 10px;
+    outline: none;
+}
+
+.InputFormulario:focus{
+    border: 2px solid rgba(52, 112, 56, 0.754);
+}
+
+.FormCadastro{
+    display: flex;
+    flex-direction: column;
+}
+
+.textoh1{
+    text-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
+    color: black;
+    font-size: 30pt;  
 }

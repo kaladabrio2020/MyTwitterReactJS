@@ -65,7 +65,7 @@ p{
     font-size: 15pt;
 }
 
-input{
+.InputLogin{
     font-size: 12pt;
     height: 40px;
     width : 350px;
@@ -76,7 +76,7 @@ input{
     outline: none;
 }
 
-input:focus{
+.InputLogin:focus{
     border: 2px solid rgba(52, 112, 56, 0.754);
 }
 
@@ -138,6 +138,13 @@ input:focus{
     width : 111px;
     border: 2px solid rgba(1, 1, 1, 0.288);
 }
+
+
 .buttonCriarConta:hover{
     border: 2px solid rgba(9, 9, 9, 0.288);
+}
+
+.DivFinal{
+    background-color: black;
+
 }
