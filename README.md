@@ -29,5 +29,5 @@ Agora irei faze-lo em Javascript mas o escopo do desse projeto terá algumas alt
 
 
 <div align="center">
-    <img src="img/TelaDeLogin.png" height=200>
+    <img src="img/TelaDeLogin.png" height=300  width=850 />
 </div>
