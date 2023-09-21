@@ -14,20 +14,20 @@ export default function MainPage(){
                 <div className={Styles.DivUser}>
 
                     <form className={Styles.FormInput}>
-                        <input type="text" placeholder="E-mail ou Cpf"  />   
-                        <input type="text" placeholder="Senha"          /> 
+                        <input type="text"     placeholder="E-mail ou Cpf"  />   
+                        <input type="password" placeholder="Senha"          /> 
                     </form>
 
-                    <div>
-                        <button className={Styles.buttonSenha}>Esqueceu sua senha?</button>
+                    <div className={Styles.DivEsqueceuSenha}>
+                        <button className={Styles.buttonEsqueceuSenha}><u>Esqueceu sua senha?</u></button>
                     </div>
                     
                     <div className={Styles.DivButtonEntrar}>
                         <button className={Styles.buttonEntrar}>Entrar</button>
                     </div>
 
-                    <div>
-                        <button>Criar Conta</button>
+                    <div className={Styles.DivButtonCriarConta}>
+                        <button className={Styles.buttonCriarConta}>Criar Conta</button>
                     </div>
                 </div>      
             
