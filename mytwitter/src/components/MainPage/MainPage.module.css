@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body{
-    background-color: #41729F;
     font-family: 'Lato', sans-serif;
 }
+
 .DivMain{
     margin-top: 290px;
     height: 50px;
