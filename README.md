@@ -28,6 +28,6 @@ Agora irei faze-lo em Javascript mas o escopo do desse projeto terá algumas alt
 
 
 
-<div>
-    <img src="/img/TelaDeLogin.png" >
+<div align="center">
+    <img src="img/TelaDeLogin.png" height=200>
 </div>
