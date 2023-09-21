@@ -24,10 +24,10 @@ Agora irei faze-lo em Javascript mas o escopo do desse projeto terá algumas alt
 
 <img>
 
-# Telas
+# Paginas do site (router)
 
-
+## Tela de login
 
 <div align="center">
-    <img src="img/TelaDeLogin.png" height=300  width=850 />
+    <img src="img/TelaDeLogin.png" />
 </div>
