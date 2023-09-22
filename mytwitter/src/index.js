@@ -8,8 +8,8 @@ import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 
 
 import App        from './App';
-import HomeUser   from './components/HomeUser/HomeUser';
-import CriarConta from './components/CriarConta/CriarConta';
+import HomeUser   from './components/homeUser/homeUser';
+import CriarConta from './components/criarConta/criarConta';
 
 
 const router = createBrowserRouter([

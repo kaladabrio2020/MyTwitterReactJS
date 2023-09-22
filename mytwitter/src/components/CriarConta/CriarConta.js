@@ -1,11 +1,34 @@
-import React,{useEffect} from "react";
-import  Styles  from "./CriarConta.module.css";
+import React,{useEffect, useState} from "react";
+import { useNavigate } from 'react-router-dom';
+import  Styles  from "./criarConta.module.css";
 
 export default function CriarConta(){
+    
+    const navigate = useNavigate();
+    const [Nome,SetNome                    ] = useState(null);
+    const [Sobrenome,SetSobrenome          ] = useState(null);
+    const [DataNascimento,SetDataNascimento] = useState(null);
+    const [Email,SetEmail                  ] = useState(null);
+    const [Password,SetPassword            ] = useState(null);
+    const [Password2,SetPassword2          ] = useState(null);
+    const [NomeDeUsuario,SetNomeDeUsuario  ] = useState(null);
+
 
     useEffect(()=>{
-        document.body.style.backgroundColor="#f0f8ff";
-    })
+        document.body.style.backgroundColor="#41729F";
+    });
+
+    const CriarConta = () =>{
+        
+        try{
+            if ( Password2 == Password && Password.length >= 8){
+                alert("cadastrado")
+                navigate(-1)
+            }
+        }catch(error){
+            alert("Senha não possui no minimo 8 caracteres ou está nula");
+        }
+    }
 
     return(
         <div className={Styles.DivMain}>
@@ -14,17 +37,23 @@ export default function CriarConta(){
             </div>
             <div className={Styles.DivFormulario}>
                 <form className={Styles.FormCadastro}>
-                    <input  className={Styles.InputFormulario} placeholder="Nome"               type="text"     />
-                    <input  className={Styles.InputFormulario} placeholder="Sobrenome"          type="text"     />
-                    <input  className={Styles.InputFormulario} placeholder="Data de Nasimento"  type="date"     />
-                    <input  className={Styles.InputFormulario} placeholder="Email"              type="email"    />
-                    <input  className={Styles.InputFormulario} placeholder="Senha"              type="password" />
-                    <input  className={Styles.InputFormulario} placeholder="Corfime Senha"      type="password" />
-                    <input  className={Styles.InputFormulario} placeholder="Nome de Usuario"    type="text"     />
+                    <input  className={Styles.InputFormulario} placeholder="Nome"               type="text"      value={Nome}            id="Nome"             onChange={(e)=>SetNome(e.target.value)}          />
+                    <input  className={Styles.InputFormulario} placeholder="Sobrenome"          type="text"      value={Sobrenome}       id="Sobrenome"        onChange={(e)=>SetSobrenome(e.target.value)}     />
+                    <input  className={Styles.InputFormulario} placeholder="Data de Nasimento"  type="date"      value={DataNascimento}  id="DataNascimento"   onChange={(e)=>SetDataNascimento(e.target.value)}/>
+                    <input  className={Styles.InputFormulario} placeholder="Email"              type="email"     value={Email}           id="Email"            onChange={(e)=>SetEmail(e.target.value)}        />
+                    <input  className={Styles.InputFormulario} placeholder="Senha"              type="password"  value={Password}        id="Password"         onChange={(e)=>SetPassword(e.target.value)}     />
+                    <input  className={Styles.InputFormulario} placeholder="Corfime Senha"      type="password"  value={Password2}       id="Password2"        onChange={(e)=>SetPassword2(e.target.value)}    />
+                    <input  className={Styles.InputFormulario} placeholder="Nome de Usuario"    type="text"      value={NomeDeUsuario}   id="NomeDeUsuario"    onChange={(e)=>SetNomeDeUsuario(e.target.value)}/>
+                    <input  className={Styles.InputFormulario} placeholder="Escreva uma frase de recuperação de senha"    type="text"      value={NomeDeUsuario}   id="NomeDeUsuario"    onChange={(e)=>SetNomeDeUsuario(e.target.value)}/>
 
-
-                </form>
                 
+                </form>
+
+                <div className={Styles.DivButtonCriarConta}>
+                    <button className={Styles.ButtonCriarConta} onClick={CriarConta}>
+                        Criar Conta 
+                    </button>
+                </div>     
             </div>
         </div> 
     

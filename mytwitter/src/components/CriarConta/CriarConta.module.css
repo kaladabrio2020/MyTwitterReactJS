@@ -14,19 +14,16 @@ body{
     justify-content: center;
 }
 .DivFormulario{
-    background-color: #41729F;
-    width: 550px;
+    background-color: #f8f8f800;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
-
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.317);
+    flex-direction: column;
   
 }
 
 .FormCadastro{
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 
@@ -42,7 +39,7 @@ body{
 }
 
 .InputFormulario:focus{
-    border: 2px solid rgba(52, 112, 56, 0.754);
+    border: 2px solid rgba(28, 190, 39, 0.754);
 }
 
 .FormCadastro{
@@ -54,4 +51,18 @@ body{
     text-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
     color: black;
     font-size: 30pt;  
+}
+
+.DivButtonCriarConta{
+    margin-top: 20px;
+}
+
+.ButtonCriarConta{
+    background-color: #419f49;
+    color: aliceblue;
+    height: 40px;
+    width: 150px;
+    font-size: 15pt;
+    border-width: 0;
+    border-radius: 10px;   
 }
