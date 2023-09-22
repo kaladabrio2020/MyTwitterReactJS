@@ -1,6 +1,7 @@
-import React,{useEffect, useState} from "react";
+import React,{ useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import  Styles  from "./criarConta.module.css";
+import  Styles         from "./criarConta.module.css";
+
 
 export default function CriarConta(){
     
@@ -24,6 +25,8 @@ export default function CriarConta(){
             if ( Password2 == Password && Password.length >= 8){
                 alert("cadastrado")
                 navigate(-1)
+            }else{
+                alert('Invalido')
             }
         }catch(error){
             alert("Senha não possui no minimo 8 caracteres ou está nula");
