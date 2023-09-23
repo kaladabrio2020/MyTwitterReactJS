@@ -32,19 +32,18 @@ export default function CriarConta(){
     }
     const CriarConta = async() =>{
         SetData();
-        try{
-            
+        
+        try{   
             if ( Password2 == Password && Password.length >= 6){
-                if ( await AdicionandoUsuario(Dados))
+                if ( await AdicionandoUsuario(Dados) )
                 {
                     alert("cadastrado");
                     navigate(-1);
                 }else{
                     alert("invalido else");
                 }
-            }else{
-                alert('Invalido')
             }
+            else{ alert('Invalido'); }
         }catch(error){
             alert("Senha não possui no minimo 8 caracteres ou está nula");
         }
