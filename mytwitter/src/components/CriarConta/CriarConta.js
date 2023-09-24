@@ -20,7 +20,7 @@ export default function CriarConta(){
         document.body.style.backgroundColor="#41729F";
     });
 
-    const SetData    = () =>{
+    const SetData = () =>{
         setDados({
             "nome"           : Nome,
             "sobrenome"      : Sobrenome,
@@ -35,17 +35,22 @@ export default function CriarConta(){
         
         try{   
             if ( Password2 == Password && Password.length >= 6){
-                if ( await AdicionandoUsuario(Dados) )
-                {
-                    alert("cadastrado");
-                    navigate(-1);
-                }else{
-                    alert("invalido else");
+                try{
+                    if ( await AdicionandoUsuario(Dados) )
+                    {
+                        alert("cadastrado"); navigate(-1);
+                    }else{
+                        alert("Usuario existente ou error");
+                    }
+                }catch(error){
+                    alert(error.message);
                 }
             }
-            else{ alert('Invalido'); }
+            else{ 
+                alert('Invalido');
+            }
         }catch(error){
-            alert("Senha não possui no minimo 8 caracteres ou está nula");
+            alert("Senha não possui no minimo 6 caracteres ou está nula \n"+error.message);
         }
     }
 

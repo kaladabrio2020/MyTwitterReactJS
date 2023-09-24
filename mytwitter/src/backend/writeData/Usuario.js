@@ -1,9 +1,14 @@
 import { dataBase }            from 'backend/firebaseconfig'
 import { addDoc , collection } from 'firebase/firestore';
-
-export const AdicionandoUsuario = async( data ) => {
-    await addDoc( 
-        collection( dataBase , 'usuarios') , data
+import { verificandoExitenciaDeUsuario } from 'backend/readData/Usuario';
+export const AdicionandoUsuario = async( Dados ) => {
+    if ( verificandoExitenciaDeUsuario( Dados.user,Dados.email ) )
+    {
+        return false;1
+    }
+    
+    addDoc( 
+        collection( dataBase , 'usuarios') , Dados
     ).then((docref)=> { return true; }
 
     ).catch((error)=>{ return false; }
