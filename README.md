@@ -32,6 +32,8 @@ Agora irei faze-lo em Javascript mas o escopo do desse projeto terá algumas alt
     <img src="img/TelaDeLogin.png" />
 </div>
 
+
+## Tela de cadatro
 <div align="center">
     <img src="img/TelaDeCadastro.png" />
 </div>
