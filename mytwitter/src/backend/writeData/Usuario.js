@@ -1,6 +1,9 @@
-import { dataBase }            from 'backend/firebaseconfig'
+import { dataBase }            from 'backend/firebaseconfig';
 import { addDoc , collection } from 'firebase/firestore';
 import { verificandoExitenciaDeUsuario } from 'backend/readData/Usuario';
+
+
+
 export const AdicionandoUsuario = async( Dados ) => {
     if ( verificandoExitenciaDeUsuario( Dados.user,Dados.email ) )
     {
