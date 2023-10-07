@@ -31,3 +31,7 @@ Agora irei faze-lo em Javascript mas o escopo do desse projeto terá algumas alt
 <div align="center">
     <img src="img/TelaDeLogin.png" />
 </div>
+
+<div align="center">
+    <img src="img/TelaDeCadastro.png" />
+</div>
