@@ -7,7 +7,7 @@ import { verificandoExitenciaDeUsuario } from 'backend/readData/Usuario';
 export const AdicionandoUsuario = async( Dados ) => {
     if ( verificandoExitenciaDeUsuario( Dados.user,Dados.email ) )
     {
-        return false;1
+        return false;
     }
     
     addDoc( 

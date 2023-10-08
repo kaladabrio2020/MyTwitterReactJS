@@ -1,0 +1,22 @@
+.divMain{
+
+}
+.divMainLeft{
+    background-color: aqua;
+    display: inline-block;
+   
+}
+
+.divMainCenter{
+    background-color: black;
+    display: inline-block;
+
+    
+}
+
+.divMainRight{
+    background-color: blue;
+    display: inline-block;
+
+    
+}

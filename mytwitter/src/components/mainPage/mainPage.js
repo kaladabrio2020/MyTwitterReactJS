@@ -1,5 +1,5 @@
 import React ,{ useEffect, useState }    from "react";
-import Styles   from "./mainPage.module.css";
+import styles   from "./mainPage.module.css";
 import { Link } from "react-router-dom";
 
 export default function MainPage(){
@@ -12,32 +12,32 @@ export default function MainPage(){
 
     return(
       
-        <div className={Styles.DivMain}>
+        <div className={styles.DivMain}>
 
-             <div className={Styles.DivText}>
+             <div className={styles.DivText}>
                 <h1>My Twitter</h1>
                 <p>Um Projeto de cadeira de Tecnicas de Programação I feito em java agora em React js.</p>
             </div>  
 
-                <div className={Styles.DivUser}>
-                    <form className={Styles.FormInput}>
-                        <input type="text"     placeholder="E-mail ou nome de usuario" className={Styles.InputLogin} value={User}     onChange={(e)=>setUser(e.target.value)}     />   
-                        <input type="password" placeholder="Senha"                     className={Styles.InputLogin} value={Password} onChange={(e)=>setPassword(e.target.value)} /> 
+                <div className={styles.DivUser}>
+                    <form className={styles.FormInput}>
+                        <input type="text"     placeholder="E-mail ou nome de usuario" className={styles.InputLogin} value={User}     onChange={(e)=>setUser(e.target.value)}     />   
+                        <input type="password" placeholder="Senha"                     className={styles.InputLogin} value={Password} onChange={(e)=>setPassword(e.target.value)} /> 
                     </form>
 
-                <div className={Styles.DivEsqueceuSenha}>
-                    <button className={Styles.buttonEsqueceuSenha}><u>Esqueceu sua senha?</u></button>
+                <div className={styles.DivEsqueceuSenha}>
+                    <button className={styles.buttonEsqueceuSenha}><u>Esqueceu sua senha?</u></button>
                 </div>
                 
-                <div className={Styles.DivButtonEntrar}>
-                    <Link>
-                        <button className={Styles.buttonEntrar}>Entrar</button>
+                <div className={styles.DivButtonEntrar}>
+                    <Link to='usuario'>
+                        <button className={styles.buttonEntrar}>Entrar</button>
                     </Link>
                 </div>
 
-                 <div className={Styles.DivButtonCriarConta}>
+                 <div className={styles.DivButtonCriarConta}>
                     <Link to="/criarconta">
-                        <button className={Styles.buttonCriarConta} u>Criar Conta</button>
+                        <button className={styles.buttonCriarConta} u>Criar Conta</button>
                     </Link>
                 </div>
             </div>   

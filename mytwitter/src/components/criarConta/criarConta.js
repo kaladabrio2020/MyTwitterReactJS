@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from "react";
 import { useNavigate }          from 'react-router-dom';
-import  Styles                  from "./criarConta.module.css";
+import  styles                  from "./criarConta.module.css";
 import  { AdicionandoUsuario }  from "backend/writeData/Usuario";
 
 export default function CriarConta(){
@@ -55,27 +55,27 @@ export default function CriarConta(){
     }
 
     return(
-        <div className={Styles.DivMain}>
+        <div className={styles.DivMain}>
             
             <div>
-                <h1 className={Styles.textoh1}>Cadastro</h1>
+                <h1 className={styles.textoh1}>Cadastro</h1>
             </div>
 
-            <div className={Styles.DivFormulario}>
-                <form className={Styles.FormCadastro}>
+            <div className={styles.DivFormulario}>
+                <form className={styles.FormCadastro}>
 
-                    <input  className={Styles.InputFormulario} placeholder="Nome"               type="text"      value={Nome}            id="Nome"             onChange={(e)=>SetNome(e.target.value)}          />
-                    <input  className={Styles.InputFormulario} placeholder="Sobrenome"          type="text"      value={Sobrenome}       id="Sobrenome"        onChange={(e)=>SetSobrenome(e.target.value)}     />
-                    <input  className={Styles.InputFormulario} placeholder="Data de Nasimento"  type="date"      value={DataNascimento}  id="DataNascimento"   onChange={(e)=>SetDataNascimento(e.target.value)}/>
-                    <input  className={Styles.InputFormulario} placeholder="Email"              type="email"     value={Email}           id="Email"            onChange={(e)=>SetEmail(e.target.value)}         />
-                    <input  className={Styles.InputFormulario} placeholder="Senha"              type="password"  value={Password}        id="Password"         onChange={(e)=>SetPassword(e.target.value)}      />
-                    <input  className={Styles.InputFormulario} placeholder="Corfime Senha"      type="password"  value={Password2}       id="Password2"        onChange={(e)=>SetPassword2(e.target.value)}     />
-                    <input  className={Styles.InputFormulario} placeholder="Nome de Usuario"    type="text"      value={NomeDeUsuario}   id="NomeDeUsuario"    onChange={(e)=>SetNomeDeUsuario(e.target.value)} />
+                    <input  className={styles.InputFormulario} placeholder="Nome"               type="text"      value={Nome}            id="Nome"             onChange={(e)=>SetNome(e.target.value)}          />
+                    <input  className={styles.InputFormulario} placeholder="Sobrenome"          type="text"      value={Sobrenome}       id="Sobrenome"        onChange={(e)=>SetSobrenome(e.target.value)}     />
+                    <input  className={styles.InputFormulario} placeholder="Data de Nasimento"  type="date"      value={DataNascimento}  id="DataNascimento"   onChange={(e)=>SetDataNascimento(e.target.value)}/>
+                    <input  className={styles.InputFormulario} placeholder="Email"              type="email"     value={Email}           id="Email"            onChange={(e)=>SetEmail(e.target.value)}         />
+                    <input  className={styles.InputFormulario} placeholder="Senha"              type="password"  value={Password}        id="Password"         onChange={(e)=>SetPassword(e.target.value)}      />
+                    <input  className={styles.InputFormulario} placeholder="Corfime Senha"      type="password"  value={Password2}       id="Password2"        onChange={(e)=>SetPassword2(e.target.value)}     />
+                    <input  className={styles.InputFormulario} placeholder="Nome de Usuario"    type="text"      value={NomeDeUsuario}   id="NomeDeUsuario"    onChange={(e)=>SetNomeDeUsuario(e.target.value)} />
                 
                 </form>
 
-                <div className={Styles.DivButtonCriarConta}>
-                    <button className={Styles.ButtonCriarConta} onClick={CriarConta}>
+                <div className={styles.DivButtonCriarConta}>
+                    <button className={styles.ButtonCriarConta} onClick={CriarConta}>
                         Criar Conta 
                     </button>
                 </div>     
