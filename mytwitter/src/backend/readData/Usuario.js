@@ -1,7 +1,7 @@
-import { dataBase } from "backend/firebaseconfig";
+import { dataBase ,app } from "backend/firebaseconfig";
 //import { getAuth ,signInWithEmailAndPassword } from "firebase/auth";
 import { getDocs , collection, query  ,where ,and , or}  from "firebase/firestore";
-
+import { getAuth ,signInWithEmailAndPassword } from "firebase/auth";
 
 export const verificandoExitenciaDeUsuario = async( NomeUser , Email )=>{
     
@@ -26,7 +26,7 @@ export const verificandoExitenciaDeUsuario = async( NomeUser , Email )=>{
     
 }
 
-export const verificandoUsuarioLogin = async(User,Password) =>{
+export const verificandoUsuarioLoginUser = async(User,Password) =>{
     const cursor = query(
         collection( dataBase , "usuarios"),
         and(
@@ -38,3 +38,14 @@ export const verificandoUsuarioLogin = async(User,Password) =>{
         )
     )
 }
+
+
+export const verificandoUsuarioLoginEmail = (email,senha) =>{
+    const auth = getAuth(app);
+
+    signInWithEmailAndPassword(auth,email,senha)
+    .then(  () => { return true;} )
+    .catch( () => { return false;})
+    return true;
+}
+

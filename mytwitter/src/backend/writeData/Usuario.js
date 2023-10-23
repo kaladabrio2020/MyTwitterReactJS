@@ -1,11 +1,12 @@
-import { dataBase }            from 'backend/firebaseconfig';
+import { dataBase ,app}        from 'backend/firebaseconfig';
 import { addDoc , collection } from 'firebase/firestore';
 import { verificandoExitenciaDeUsuario } from 'backend/readData/Usuario';
+import { getAuth , createUserWithEmailAndPassword, reauthenticateWithCredential } from 'firebase/auth';
 
 
 
 export const AdicionandoUsuario = async( Dados ) => {
-    if ( verificandoExitenciaDeUsuario( Dados.user,Dados.email ) )
+    if ( await verificandoExitenciaDeUsuario( Dados.user,Dados.email ) )
     {
         return false;
     }
@@ -18,4 +19,13 @@ export const AdicionandoUsuario = async( Dados ) => {
     
     );
     return true;
+}
+
+
+export const CriarEmail = (email,senha) =>{
+    const auth = getAuth(app);
+
+    createUserWithEmailAndPassword(auth,email,senha)
+    .then( ()=>{ return true; })
+    .catch(()=>{ return false;})
 }

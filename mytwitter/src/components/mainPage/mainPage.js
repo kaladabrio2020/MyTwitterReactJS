@@ -1,14 +1,24 @@
 import React ,{ useEffect, useState }    from "react";
 import styles   from "./mainPage.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { verificandoUsuarioLoginEmail } from "backend/readData/Usuario";
 
 export default function MainPage(){
+    const navigate = useNavigate();
     const [User,setUser]         = useState(null);
     const [Password,setPassword] = useState(null);
 
     useEffect(()=>{
         document.body.style.backgroundColor="#41729F"
     })
+    const EntrarConta = () => {
+        
+        if ( verificandoUsuarioLoginEmail(User,Password) ){
+            navigate('/');
+            
+        }
+        alert('Usuario/Email ou senha inválida');
+    }
 
     return(
       
@@ -30,9 +40,7 @@ export default function MainPage(){
                 </div>
                 
                 <div className={styles.DivButtonEntrar}>
-                    <Link to='usuario'>
-                        <button className={styles.buttonEntrar}>Entrar</button>
-                    </Link>
+                    <button className={styles.buttonEntrar} onClick={()=>EntrarConta()}>Entrar</button>
                 </div>
 
                  <div className={styles.DivButtonCriarConta}>

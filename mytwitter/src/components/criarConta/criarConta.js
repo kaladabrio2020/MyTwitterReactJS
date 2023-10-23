@@ -1,7 +1,7 @@
 import React,{ useEffect, useState } from "react";
 import { useNavigate }          from 'react-router-dom';
 import  styles                  from "./criarConta.module.css";
-import  { AdicionandoUsuario }  from "backend/writeData/Usuario";
+import  { AdicionandoUsuario, CriarEmail }  from "backend/writeData/Usuario";
 
 export default function CriarConta(){
     
@@ -36,9 +36,11 @@ export default function CriarConta(){
         try{   
             if ( Password2 == Password && Password.length >= 6){
                 try{
-                    if ( await AdicionandoUsuario(Dados) )
+                    if ( AdicionandoUsuario(Dados) )
                     {
-                        alert("cadastrado"); navigate(-1);
+                        CriarEmail(Email,Password);
+                        alert("cadastrado");
+                        navigate('/')
                     }else{
                         alert("Usuario existente ou error");
                     }
